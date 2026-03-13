@@ -4,16 +4,33 @@
 <title>My Exercises</title>
 
 <style>
+
 body{
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg,#ffd6ec,#d6f0ff);
-    text-align: center;
-    padding-top: 80px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    width:350px;
 }
 
 h1{
-    font-size: 40px;
+    margin-bottom:10px;
     color:#333;
+}
+
+p{
+    color:#666;
+    margin-bottom:30px;
 }
 
 ul{
@@ -22,7 +39,7 @@ ul{
 }
 
 li{
-    margin:15px;
+    margin:15px 0;
 }
 
 a{
@@ -33,7 +50,6 @@ a{
     padding:12px 25px;
     border-radius:20px;
     font-size:18px;
-    margin:10px;     
     transition:0.3s;
 }
 
@@ -41,19 +57,25 @@ a:hover{
     background:#ff4fa3;
     transform:scale(1.05);
 }
-</style>
 
+</style>
 </head>
 
 <body>
 
-<h1> My Exercises </h1>
+<div class="container">
+
+<h1>😸 My Exercises 🦔</h1>
+
+<p>Welcome to my simple website! Here you can explore my HTML, CSS, and JavaScript exercises.</p>
 
 <ul>
 <li><a href="Bagian1.html">Exercise 1</a></li>
 <li><a href="Bagian2.html">Exercise 2</a></li>
 <li><a href="Bagian3.html">Exercise 3</a></li>
 </ul>
+
+</div>
 
 </body>
 </html>
