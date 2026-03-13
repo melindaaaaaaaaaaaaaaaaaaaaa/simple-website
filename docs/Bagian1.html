@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Logging Example</title>
+</head>
+<body>
+
+<div id="container"></div>
+
+<script src="Bagian1.js"></script>
+
+<script>
+let cnt = getContainer("container");
+let txa = createTextarea("text-output");
+
+// 🔥 FORCE resize (pasti works)
+txa.style.width = "600px";
+txa.style.height = "300px";
+txa.style.fontSize = "14px";
+
+cnt.append(txa);
+
+consolex.setOutput(txa);
+
+// Logs
+consolex.log("Hello! This is my first example.");
+consolex.log("My name is Melinda.");
+consolex.log("I am learning how JavaScript can display output in a webpage.");
+
+consolex.log("I can also show numbers:", 5, 10, 15);
+
+consolex.log("Here is a simple object:");
+consolex.log({ hobby: "Reading", semester: 8 });
+
+consolex.log("That's all. Thank you!");
+</script>
+
+</body>
+</html>

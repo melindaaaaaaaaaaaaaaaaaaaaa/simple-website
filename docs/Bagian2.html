@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Button Example</title>
+</head>
+<body>
+
+<div id="container"><div>
+
+<script src="Bagian1.js"></script>
+<script src="Bagian2.js"></script>
+
+<script>
+// Instantiate containers, output textarea, and buttons
+const cnt = getContainer("container");
+const txa = createTextarea("text-output");
+const btnDiv = createDiv("button-container");
+
+const mBtn = createButton("m-button", "Morning");
+const sBtn = createButton("s-button", "Study");
+const rBtn = createButton("r-button", "Relax");
+const eBtn = createButton("e-button", "Exercise");
+const nBtn = createButton("n-button", "Newline");
+
+// Append textarea to container
+cnt.append(txa);
+cnt.append(btnDiv);
+
+btnDiv.append(mBtn);
+btnDiv.append(sBtn);
+btnDiv.append(rBtn);
+btnDiv.append(eBtn);
+btnDiv.append(nBtn);
+
+// Change elements flex value
+changeElementsFlex(
+  ["text-output", "3"],
+  ["button-container", "1"]  
+);
+
+// Bind consolex output to textarea
+consolex.setOutput(txa);
+consolex.setEOL("");
+
+// Define activities
+const activities = [
+  "🌅 Wake up and prepare for the day",
+  "📚 Study and do assignments",
+  "🎧 Relax and listen to music",
+  "🏃 Exercise to stay healthy"
+];
+
+// Button events
+mBtn.addEventListener("click", () => {consolex.log(activities[0]);});
+sBtn.addEventListener("click", () => {consolex.log(activities[1]);});
+rBtn.addEventListener("click", () => {consolex.log(activities[2]);});
+eBtn.addEventListener("click", () => {consolex.log(activities[3]);});
+nBtn.addEventListener("click", () => {consolex.log("\n");});
+</script>
+
+</body>
+</html>
